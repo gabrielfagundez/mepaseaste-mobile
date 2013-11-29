@@ -12,3 +12,15 @@
 2013-11-29 20:44:56.988 MePaseasteUY[12102:80b] Finished load of: file:///Users/gabrielfagundez/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/57C3AC65-0436-46A7-B4AF-A1CABDA59A3A/MePaseasteUY.app/www/index.html
 2013-11-29 20:44:59.149 MePaseasteUY[12102:80b] Resetting plugins due to page load.
 2013-11-29 20:44:59.167 MePaseasteUY[12102:80b] Finished load of: file:///Users/gabrielfagundez/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/57C3AC65-0436-46A7-B4AF-A1CABDA59A3A/MePaseasteUY.app/www/page2.html
+2013-11-29 21:16:27.532 MePaseasteUY[12946:80b] Multi-tasking -> Device: YES, App: YES
+2013-11-29 21:16:27.581 MePaseasteUY[12946:80b] Unlimited access to network resources
+2013-11-29 21:16:28.370 MePaseasteUY[12946:80b] [CDVTimer][splashscreen] 157.530010ms
+2013-11-29 21:16:28.377 MePaseasteUY[12946:80b] [CDVTimer][TotalPluginStartup] 164.615989ms
+2013-11-29 21:16:29.009 MePaseasteUY[12946:80b] Resetting plugins due to page load.
+2013-11-29 21:16:29.186 MePaseasteUY[12946:80b] Finished load of: file:///Users/gabrielfagundez/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/57C3AC65-0436-46A7-B4AF-A1CABDA59A3A/MePaseasteUY.app/www/index.html
+2013-11-29 21:24:12.739 MePaseasteUY[13461:80b] Multi-tasking -> Device: YES, App: YES
+2013-11-29 21:24:12.808 MePaseasteUY[13461:80b] Unlimited access to network resources
+2013-11-29 21:24:13.469 MePaseasteUY[13461:80b] [CDVTimer][splashscreen] 220.773995ms
+2013-11-29 21:24:13.470 MePaseasteUY[13461:80b] [CDVTimer][TotalPluginStartup] 221.548021ms
+2013-11-29 21:24:13.965 MePaseasteUY[13461:80b] Resetting plugins due to page load.
+2013-11-29 21:24:14.116 MePaseasteUY[13461:80b] Finished load of: file:///Users/gabrielfagundez/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/57C3AC65-0436-46A7-B4AF-A1CABDA59A3A/MePaseasteUY.app/www/index.html

@@ -25,39 +25,115 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+
+        <script type="text/javascript" charset="utf-8" src="js/controls.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/NativeControls.js"></script>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+
+
+
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+
+            $(document).ready( function() {
+                document.addEventListener("deviceready", onDeviceReady, false);
+                window.addEventListener("resize", orientationChange, false);
+            });
+
+            function onDeviceReady() {
+                newLoc = location.href.substring(0, location.href.lastIndexOf("/")+1);
+
+                // Initializating TabBar
+                nativeControls = window.plugins.nativeControls;
+                nativeControls.createTabBar();
+
+                // Back Button
+                nativeControls.createTabBarItem(
+                        "page1",
+                        "Page 1",
+                        "www/images/pound.png",
+                        {"onSelect": function() {
+                            $.mobile.changePage( "#page1", { transition: 'reverse slide' } );
+                            nativeControls.setNavBarTitle("Page 1");
+                            nativeControls.selectTabBarItem("page1");
+                            selectedTabBarItem = "page1";
+                        }}
+                );
+
+                // Home tab
+                nativeControls.createTabBarItem(
+                        "page2",
+                        "Page 2",
+                        "www/images/pound.png",
+                        {"onSelect": function() {
+                            if ( selectedTabBarItem == "page1" ) {
+                                $.mobile.changePage( "#page2", { transition: 'slide' } );
+                            } else {
+                                $.mobile.changePage( "#page2", { transition: 'reverse slide' } );
+                            }
+                            nativeControls.setNavBarTitle("Page 2");
+                            nativeControls.selectTabBarItem("page2");
+                            selectedTabBarItem = "page2";
+                        }}
+                );
+
+                // About tab
+                nativeControls.createTabBarItem(
+                        "page3",
+                        "Page 3",
+                        "www/images/question.png",
+                        {"onSelect": function() {
+                            $.mobile.changePage( "#page3", { transition: 'slide' } );
+                            nativeControls.setNavBarTitle("Page 3");
+                            nativeControls.selectTabBarItem("page3");
+                            selectedTabBarItem = "page3";
+                        }}
+                );
+                // Compile the TabBar
+                nativeControls.showTabBar();
+                nativeControls.showTabBarItems("page1", "page2", "page3");
+
+                selectedTabBarItem = "page1";
+                nativeControls.selectTabBarItem("page1");
+
+                // Setup NavBar
+                nativeControls.createNavBar();
+                nativeControls.setNavBarTitle("Page 1");
+
+                nativeControls.setupLeftNavButton(
+                        "?",
+                        "",
+                        "onLeftNavButton"
+                );
+
+                //nativeControls.hideLeftNavButton();
+
+                nativeControls.setupRightNavButton(
+                        "About",
+                        "",
+                        "onRightNavButton"
+                );
+
+                nativeControls.showNavBar();
+            }
+
+            function onLeftNavButton() {
+                alert('Left Button Pressed');
+            }
+
+            function onRightNavButton() {
+                alert('Right Button Pressed');
+            }
+
+            function orientationChange() {
+                nativeControls = window.plugins.nativeControls;
+                nativeControls.resizeTabBar();
+            }
         </script>
-
-        <a href="page2.html">
-            Boton para la pagina 2
-        </a>
-
-        <a href="page2.html">
-            Boton para la pagina 2
-        </a>
-
-        <a href="page2.html">
-            Boton para la pagina 2
-        </a>
-
-        <a href="page2.html">
-            Boton para la pagina 2
-        </a>
-
-        <a href="page2.html">
-            Boton para la pagina 2
-        </a>
     </body>
 </html>
