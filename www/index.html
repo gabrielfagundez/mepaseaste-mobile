@@ -7,56 +7,95 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/shared.css">
+
+    <!--Google API-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 </head>
 <body>
 
 <div class="header">
     <div class="row">
-        <div id="header1" class="header-element active">HOME</div>
-        <div id="header2" class="header-element">DESTINOS INGRESADOS</div>
-        <div id="header3" class="header-element">a</div>
-        <div id="header4" class="header-element">PERFIL</div>
+        <div id="header0" class="header-element active">HOME</div>
+        <div id="header1" class="header-element">PUNTOS INGRESADOS</div>
+        <div id="header2" class="header-element">OTRO</div>
+        <div id="header3" class="header-element">PERFIL</div>
     </div>
 </div>
 
 <div id="pageWrapper">
     <div id="pageScroller">
+
+
+        <!--PAGINA 1-->
         <div class="page" >
-            <table id="datos" class="radius">
-                <thead>
-                <tr>
-                    <th class="tipo">Tipo</th>
-                    <th class="ubicacion">Ubicacion</th>
-                    <th class="nombre">Nombre</th>
-                </tr>
-                </thead>
-            </table>
+            <div id="map"></div>
         </div>
 
+
+        <!--PAGINA 2-->
         <div class="page" >
             <div id="sin_datos">
-                <div class="panel radius">
 
+                <div class="info-container">
+                    <div class="panel radius">
+                        <div class="info-izq">
+                            <img src="img/query.png">
+                        </div>
+
+                        <div class="info-der">
+                            <div class="info-der-titulo">
+                                Aun no has ingresado ningun punto
+                            </div>
+
+                            <div class="info-der-texto">
+                                Prueba volviendo a la pantalla anterior, y selecciona puntos en el mapa. En esta pantalla podras
+                                ver los puntos ingresados y realizar la consulta.
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
             <div id="con_datos" class="hide">
-
+                <table id="datos" class="radius">
+                    <thead>
+                    <tr>
+                        <th class="tipo">Tipo</th>
+                        <th class="ubicacion">Ubicacion</th>
+                        <th class="nombre">Nombre</th>
+                    </tr>
+                    </thead>
+                </table>
             </div>
         </div>
+
+
+        <!--PAGINA 3-->
         <div class="page" >
             Pagina 3
         </div>
+
+
+        <!--PAGINA 4-->
         <div class="page">
             Pagina 4
         </div>
+
     </div>
 </div>
 
 
 <script src="js/lib/vendor/jquery.js"></script>
 <script src="js/lib/iscroll.js"></script>
-<script src="js/lib/scroll.js"></script>
+<script src="js/index.js"></script>
+<script src="js/map.js"></script>
+
+<script>
+    $(document).ready(function() {
+        initialize(true);
+    });
+</script>
 
 </body>
 

@@ -6,25 +6,22 @@
     border-bottom-color: #1556b5;
     text-align: center;
     display: table;
-    font-variant:small-caps;
-    letter-spacing:1pt;
 }
 
 .header-element{
     width: 24%;
     height: 70px;
+    /*display: inline-block;*/
+
     color: #505050;
     font-size: 12px;
+
     display: table-cell;
     vertical-align: middle;
 }
 
 .active{
     color: #1556b5;
-}
-
-.unactive{
-    color: #505050;
 }
 
 .hide{

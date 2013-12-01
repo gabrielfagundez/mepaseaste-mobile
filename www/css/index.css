@@ -1,6 +1,4 @@
 body {
-    font-family: helvetica neue;
-
     /* Safari 4-5, Chrome 1-9 */
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6ABDE9), to(#0A2955));
 
@@ -47,7 +45,7 @@ body {
     float: left;
     -webkit-transform:translate3d(0,0,0);
     height: 100%;
-    padding: 20px;
+    padding-top: 2px;
 }
 
 #pageWrapper {
@@ -93,3 +91,48 @@ body {
 .nombre{
     width: 40%;
 }
+
+.info-container{
+    width: 96%;
+    padding-left: 2%;
+    padding-top: 10px;
+}
+.info-izq{
+    display: inline-block;
+    vertical-align:top;
+    margin-top: 0px;
+    width: 30%;
+}
+.info-der{
+    display: inline-block;
+    vertical-align:top;
+    margin-top: 0px;
+    width: 69%;
+}
+.info-der-titulo{
+    font-size: 16px;
+    text-align: center;
+    text-decoration: #000000;
+    color: #000000;
+    font-weight:bold;
+    font-variant:small-caps;
+    letter-spacing:1pt;
+    word-spacing:0pt;
+}
+.info-der-texto{
+    font-size: 13px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: #636363;
+    color: #636363;
+    font-variant:small-caps;
+    letter-spacing:1pt;
+    word-spacing:0pt;
+}
+
+/* Mapa */
+#map{
+    width: 100%;
+    height: 100%;
+}
+
