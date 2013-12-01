@@ -1,0 +1,29 @@
+.header{
+    height: 70px;
+    background: #FFFFFF;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #1556b5;
+    text-align: center;
+    display: table;
+}
+
+.header-element{
+    width: 24%;
+    height: 70px;
+    /*display: inline-block;*/
+
+    color: #505050;
+    font-size: 15px;
+
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.active{
+    color: #1556b5;
+}
+
+.hide{
+    display: none;
+}
