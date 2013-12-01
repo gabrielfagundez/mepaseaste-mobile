@@ -215,28 +215,30 @@ function addMarkerToResultPage(latitude, longitude, icon){
     });
 };
 
+
 function addNewPoint(marker, cant_markers) {
 
     if(cant_markers != 0){
 
-        // Calculamos la distancia a los demas marcadores ingresados
-        url = 'http://maps.googleapis.com/maps/api/distancematrix/json?';
-        url = url + 'origins=' + marker.position.lat() + ',' + marker.position.lng();
-        url = url + '&destinations=';
+        // Variables de consulta
+        origin = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
+        destinations = new Array()
 
-        // Iteramos en los marcadores
-        var dests = ''
         for(var actual_pos = 0; actual_pos < cant_markers; actual_pos++) {
-            if(actual_pos == 0){
-                dests = markers[actual_pos].position.lat() + ',' + markers[actual_pos].position.lng();
-            } else {
-                dests =  dests + '|' + markers[actual_pos].position.lat() + ',' + markers[actual_pos].position.lng();
-            }
+            destinations.push(new google.maps.LatLng(markers[actual_pos].position.lat(), markers[actual_pos].position.lng()));
         }
-        url = url + dests;
-        url = url + '&mode=driving&language=es&sensor=false';
 
-        getDistance(marker, url);
+        var service = new google.maps.DistanceMatrixService();
+        service.getDistanceMatrix(
+            {
+                origins: [origin],
+                destinations: destinations,
+                travelMode: google.maps.TravelMode.DRIVING,
+                avoidHighways: false,
+                avoidTolls: false
+            },
+            function(response, status) { processDistances(response, status, marker) }
+        );
     }
 }
 
@@ -245,46 +247,41 @@ function addNewPoint(marker, cant_markers) {
 // Cada marcador posee información relativa a todos los anteriores marcadores
 // ingresados en el sistema. De esta forma, se alivia la carga a Google una vez que
 // se envía la información final.
-function getDistance(marker, url){
+function processDistances(response, status, marker){
 
-    // Consultamos la API de distancias
-    return $.ajax({
-        url: url,
-        success: function(data){
+    if (status == google.maps.DistanceMatrixStatus.OK) {
 
-            if(data['status'] == 'OK'){
+        // Obtenemos el origen
+        var origins = response.originAddresses;
 
-                // Obtenemos la matriz de distancias
-                distancias = data['rows'][0]['elements'];
+        // Obtenemos los destinos
+        var destinations = response.destinationAddresses;
 
-                // Almacenamos las distancias de cada uno
-                for(var iter_res = 0; iter_res < distancias.length; iter_res++){
+        // Obtenemos la matriz de distancias
+        var distancias = response.rows[0]['elements'];
 
-                    // Verificamos que no haya error en la distancia puntual
-                    if(distancias[iter_res]['status'] == 'OK') {
+        // Almacenamos las distancias de cada uno
+        for(var iter_res = 0; iter_res < distancias.length; iter_res++){
 
-                        // Obtenemos los datos puntuales
-                        distancia = distancias[iter_res]['distance'];
-                        tiempo = distancias[iter_res]['duration'];
+            // Verificamos que no haya error en la distancia puntual
+            if(distancias[iter_res]['status'] == google.maps.DistanceMatrixStatus.OK) {
 
-                        // Actualizamos el marker con los datos de Google
-                        marker.distancias_anteriores_string.push(distancia['text']);
-                        marker.distancias_anteriores_raw.push(distancia['value']);
-                        marker.tiempos_anteriores_string.push(tiempo['text']);
-                        marker.tiempos_anteriores_raw.push(tiempo['value']);
+                // Obtenemos los datos puntuales
+                distancia = distancias[iter_res]['distance'];
+                tiempo = distancias[iter_res]['duration'];
 
-                    } else {
-                        alert('Ocurrió un error en la funcion de obtener distacia - La llamada a Google dio error en un punto específico');
-                    }
-                }
+                // Actualizamos el marker con los datos de Google
+                marker.distancias_anteriores_string.push(distancia['text']);
+                marker.distancias_anteriores_raw.push(distancia['value']);
+                marker.tiempos_anteriores_string.push(tiempo['text']);
+                marker.tiempos_anteriores_raw.push(tiempo['value']);
 
             } else {
-                alert('Ocurrió un error en la funcion de obtener distancia - La llamada a Google dio Success pero devolvio error interno');
+                alert('Ocurrió un error en la funcion de obtener distacia - La llamada a Google dio error en un punto específico');
             }
-        },
-        error: function(data){
-            alert('Ocurrió un error en la funcion de obtener distancia - La llamada a Google NO dio Success');
         }
-    });
+    } else {
+        alert('Ocurrió un error en la funcion de obtener distancia - La llamada a Google dio Success pero devolvio error interno');
+    }
 
 }
