@@ -76,11 +76,9 @@ body {
 }
 
 
-
-
 /* Tabla */
-#datos{
-    width: 100%;
+#tabla_de_datos{
+    margin: 5px 5px 5px 5px;
 }
 .tipo{
     width: 10%;
