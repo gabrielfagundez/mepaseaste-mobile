@@ -6,104 +6,52 @@
     <link rel="stylesheet" type="text/css" href="css/lib/foundation.css">
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/shared.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/map.css">
 
     <!--Google API-->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
 </head>
 <body>
 
-<div class="header">
-    <div class="row">
-        <div id="header0" class="header-element active">HOME</div>
-        <div id="header1" class="header-element">PUNTOS INGRESADOS</div>
-        <div id="header2" class="header-element">OTRO</div>
-        <div id="header3" class="header-element">PERFIL</div>
+
+<div id="upper">
+    <div class="header">
+        <div id="header-top">
+
+            <!-- Lineas superiores -->
+            <div class="red-header-line"></div>
+            <div class="blue-header-line"></div>
+            <div class="yellow-header-line"></div>
+            <div class="green-header-line"></div>
+
+
+            <div>
+                <img id="menu" src="img/navigation/ic_drawer.png">
+                <img id="expand" src="img/navigation/ic_action_expand.png">
+            </div>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+</div>
+
+<div id="lower">
+    <div id="bar">Bar with a <a href="#" id="toggle">button</a> to toggle the panel</div>
+    <div id="panel">
+        <p>Panel - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a mauris et nulla facilisis eleifend. Sed metus orci, vulputate sit amet malesuada id, luctus vestibulum lacus. Sed faucibus, nibh vel faucibus porta, lectus lacus suscipit metus, ut posuere nulla dolor porttitor erat. Nam iaculis dolor et est tristique scelerisque. Integer gravida scelerisque est, ut pellentesque sem facilisis in. Quisque felis elit, laoreet id sagittis non, sollicitudin vitae turpis. Pellentesque quis quam sed nibh sollicitudin porttitor non ac sapien. Cras luctus egestas urna, vitae bibendum enim malesuada ut. Nulla porta tempus mi vel consequat. Aenean scelerisque porttitor felis, id elementum erat porttitor eu. Mauris vitae elit non lorem malesuada viverra non ac eros.</p>
     </div>
 </div>
 
-<div id="pageWrapper">
-    <div id="pageScroller">
-
-
-        <!--PAGINA 1-->
-        <div class="page" >
-            <div id="map"></div>
-        </div>
-
-
-        <!--PAGINA 2-->
-        <div class="page" >
-            <div id="sin-datos">
-
-                <div class="info-container">
-                    <div class="panel radius">
-                        <div class="info-izq">
-                            <img src="img/query.png">
-                        </div>
-
-                        <div class="info-der">
-                            <div class="info-der-titulo">
-                                Aun no has ingresado ningun punto
-                            </div>
-
-                            <div class="info-der-texto">
-                                Prueba volviendo a la pantalla anterior, y selecciona puntos en el mapa. En esta pantalla podras
-                                ver los puntos ingresados y realizar la consulta.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="con-datos" class="hide">
-                <table id="tabla_de_datos" class="radius">
-                    <thead>
-                    <tr>
-                        <th class="tipo">Tipo</th>
-                        <th class="ubicacion">Ubicacion</th>
-                        <th class="nombre">Nombre</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-        <!--PAGINA 3-->
-        <div class="page" >
-            <div class="background-pag-3">
-
-            </div>
-        </div>
-
-
-        <!--PAGINA 4-->
-        <div class="page">
-            <div class="background-pag-4">
-
-            </div>
-        </div>
-
-    </div>
-</div>
 
 
 <script src="js/lib/vendor/jquery.js"></script>
-<script src="js/lib/iscroll.js"></script>
-<script src="js/index.js"></script>
 <script src="js/map.js"></script>
-
-<script>
-    $(document).ready(function() {
-        initialize(true);
-    });
-</script>
+<script src="js/lib/vendor/quo.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 

@@ -14,59 +14,26 @@
 <body>
 
 <div class="header">
-    <div class="row">
-        <div id="header1" class="header-element active">HOME</div>
-        <div id="header2" class="header-element">DESTINOS INGRESADOS</div>
-        <div id="header3" class="header-element">OTRO</div>
-        <div id="header4" class="header-element">PERFIL</div>
+    <div id="header-top">
+        <div class="red-header-line"></div>
+        <div class="blue-header-line"></div>
+        <div class="yellow-header-line"></div>
+        <div class="green-header-line"></div>
     </div>
 </div>
 
-<div id="pageWrapper">
-    <div id="pageScroller">
-        <div class="page" >
-            <div id="map"></div>
-        </div>
+<div id="map"></div>
 
-        <div class="page" >
-            <div id="sin_datos">
-                <div class="panel radius alert">
-                    Aun no has ingresado datos.
-                </div>
-            </div>
-
-            <div id="con_datos" class="hide">
-                <table id="datos" class="radius">
-                    <thead>
-                    <tr>
-                        <th class="tipo">Tipo</th>
-                        <th class="ubicacion">Ubicacion</th>
-                        <th class="nombre">Nombre</th>
-                    </tr>
-                    </thead>
-                </table>
-            </div>
-        </div>
-        <div class="page" >
-            Pagina 3
-        </div>
-        <div class="page">
-            Pagina 4
-        </div>
-    </div>
+<div id="barra_inferior">
+    <div class="arrow-up"></div>
 </div>
 
 
 <script src="js/lib/vendor/jquery.js"></script>
-<script src="js/lib/iscroll.js"></script>
-<script src="js/lib/scroll.js"></script>
+<script src="js/lib/vendor/jquery-mobile.js"></script>
 <script src="js/map.js"></script>
-
-<script>
-    $(document).ready(function() {
-        initialize(true);
-    });
-</script>
+<script src="js/lib/vendor/quo.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 

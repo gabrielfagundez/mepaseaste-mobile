@@ -155,12 +155,11 @@ function createMarker(event) {
     html =
         "<tr id='fila_" + marker.markerId + "'>" +
             "<a href='javascript:centerMarker(" + marker.markerId + ");'>" +
-            "<th class='table-small'>" +
+            "<th>" +
             "<img src='" + marker.icon + "'>" +
             "</th>" +
             "</a>" +
-            "<th class='table-big' id='geocode_" + marker.markerId + "'><p>Obteniendo dirección.. </p></th>" +
-            "<th class='table-big' id='nombre_" + marker.markerId + "' ><p>" + marker.nombre + "</p></th>" +
+            "<th id='geocode_" + marker.markerId + "'><p>Obteniendo dirección.. </p></th>" +
             "</tr>";
     tabla.append(html);
 
