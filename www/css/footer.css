@@ -3,3 +3,13 @@
     width: 100%;
     background-color: #ffffff;
 }
+
+#footer{
+    height: 30px;
+    background-color: #bd3e25;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 15px;
+    opacity: 0.8;
+    width: 100%;
+}

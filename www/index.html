@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/map.css">
 
@@ -43,7 +44,20 @@
 <div id="lower">
 
     <!--Contenido previo-->
-    <div id="bar">Bar with a <a href="#" id="toggle">button</a> to toggle the panel
+    <div id="bar">
+        <a href="#" id="toggle">
+            <div id="footer">
+                <img src="img/icon/marker.white.png" width="25" height="25" style="margin-top: -5px">
+                <div id="ver_puntos">
+                    Ver puntos ingresados
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <!--Contenido al clickear en el enlace-->
+    <div id="footer_content">
         <div id="origen" class="marcador_blanco">
             <div class="borde_rojo"></div>
             <div class="linea_marcador_gris"></div>
@@ -52,12 +66,6 @@
                 Aun no has ingresado un origen
             </div>
         </div>
-    </div>
-
-
-    <!--Contenido al clickear en el enlace-->
-    <div id="footer_content">
-
     </div>
 
 

@@ -16,13 +16,13 @@
 
 .marcador_blanco{
     width: 100%;
-    height: 80px;
+    height: 50px;
     position: relative;
     background-color: #ffffff;
 }
 .marcador_gris{
     width: 100%;
-    height: 80px;
+    height: 50px;
     position: relative;
     background-color: #f2f2f2;
 }
@@ -81,4 +81,7 @@
     background-color: #45b39c;
     width: 4px;
     height: 100%;
+}
+#ver_puntos{
+    display: inline;
 }
