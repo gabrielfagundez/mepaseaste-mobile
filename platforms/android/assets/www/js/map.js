@@ -149,27 +149,38 @@ function createMarker(event) {
     markerId = markerId + 1;
     markers.push(marker);
 
-
     // Update table
-    tabla = $('#tabla_de_datos');
-    html =
-        "<tr id='fila_" + marker.markerId + "'>" +
-            "<a href='javascript:centerMarker(" + marker.markerId + ");'>" +
-            "<th>" +
-            "<img src='" + marker.icon + "'>" +
-            "</th>" +
-            "</a>" +
-            "<th id='geocode_" + marker.markerId + "'><p>Obteniendo dirección.. </p></th>" +
-            "</tr>";
-    tabla.append(html);
+    if(markers.length % 4 == 1){
+        border_class = 'borde_rojo'
+        general_class = 'marcador_blanco'
+    }
+    if(markers.length % 4 == 2){
+        border_class = 'borde_azul'
+        general_class = 'marcador_gris'
+    }
+    if(markers.length % 4 == 3){
+        border_class = 'borde_amarillo'
+        general_class = 'marcador_blanco'
+    }
+    if(markers.length % 4 == 0){
+        border_class = 'borde_verde'
+        general_class = 'marcador_gris'
+    }
 
 
-    // Delete Info Box
-    $('#con-datos').show();
-    $('#sin-datos').hide();
-
-    if(markers.length > 1){
-        $('#boton_enviar_datos').show();
+    if(markers.length == 1){
+        $('#geocode_1').html("<img src='img/icon/marker.png' width='30' height='30'>" + 'Calculando la direccion..')
+    } else {
+        html =
+            "<div class='" + general_class + "'>" +
+                "<div class='"+ border_class + "'></div>" +
+                "<div class='linea_marcador_gris'></div>" +
+                "<div id='" + "geocode_" + marker.markerId + "' class='posicion'>" +
+                "<img src='img/icon/marker.png' width='30' height='30'>" +
+                "Calculando la direccion.." +
+                "</div>" +
+            "</div>"
+        $('#footer_content').append(html)
     }
 
 
@@ -177,7 +188,7 @@ function createMarker(event) {
     geocoder.geocode({'latLng': event.latLng}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
-                $('#geocode_' + marker.markerId).html("<p>" + results[0].formatted_address + "</p>");
+                $('#geocode_' + marker.markerId).html("<img src='img/icon/marker.png' width='30' height='30'>" + results[0].formatted_address);
                 getMarkerByID(marker.markerId).address = results[0].formatted_address;
             }
         } else {

@@ -20,9 +20,12 @@
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/index.html \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/js \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/plugins \
+/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/css/common.css \
+/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/css/footer.css \
+/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/css/header.css \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/css/index.css \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/css/lib \
-/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/css/shared.css \
+/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/css/map.css \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/css/lib/foundation.css \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/css/lib/normalize.css \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon \
@@ -34,6 +37,7 @@
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/query.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/up.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon/end_marker.png \
+/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon/marker.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon/start_marker.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_action_expand.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_action_overflow.png \

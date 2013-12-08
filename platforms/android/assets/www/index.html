@@ -6,38 +6,66 @@
     <link rel="stylesheet" type="text/css" href="css/lib/foundation.css">
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/shared.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/map.css">
 
     <!--Google API-->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
-<div class="header">
-    <div id="header-top">
-        <div class="red-header-line"></div>
-        <div class="blue-header-line"></div>
-        <div class="yellow-header-line"></div>
-        <div class="green-header-line"></div>
-        
-        <div>
-            <img id="menu" src="img/navigation/ic_drawer.png">
-            <img id="refresh" src="img/navigation/ic_action_rotate_right.png">
-            <img id="expand" src="img/navigation/ic_action_expand.png">
-            <img id="overflow" src="img/navigation/ic_action_overflow.png">
+
+<div id="upper">
+    <div class="header">
+        <div id="header-top">
+
+            <!-- Lineas superiores -->
+            <div class="red-header-line"></div>
+            <div class="blue-header-line"></div>
+            <div class="yellow-header-line"></div>
+            <div class="green-header-line"></div>
+
+
+            <div>
+                <img id="menu" src="img/navigation/ic_drawer.png">
+                <img id="expand" src="img/navigation/ic_action_expand.png">
+            </div>
         </div>
     </div>
+
+    <div id="map"></div>
+
 </div>
 
-<div id="map"></div>
+<div id="lower">
 
-<div id="barra_inferior">
-    <div class="arrow-up"></div>
+    <!--Contenido previo-->
+    <div id="bar">Bar with a <a href="#" id="toggle">button</a> to toggle the panel
+        <div id="origen" class="marcador_blanco">
+            <div class="borde_rojo"></div>
+            <div class="linea_marcador_gris"></div>
+            <div id="geocode_1" class="posicion">
+                <img src="img/icon/marker.png" width="30" height="30">
+                Aun no has ingresado un origen
+            </div>
+        </div>
+    </div>
+
+
+    <!--Contenido al clickear en el enlace-->
+    <div id="footer_content">
+
+    </div>
+
+
 </div>
+
 
 
 <script src="js/lib/vendor/jquery.js"></script>
-<script src="js/lib/vendor/jquery-mobile.js"></script>
 <script src="js/map.js"></script>
 <script src="js/lib/vendor/quo.js"></script>
 <script src="js/index.js"></script>

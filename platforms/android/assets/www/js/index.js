@@ -1,19 +1,12 @@
-function initialize_headers(){
-    $('#selected0').css('width', $('#header0').width());
-}
-
 $(document).ready(function() {
-    initialize_headers();
     initialize(true);
+    set_map_height()
+
+    $("#toggle").click(function(){
+        $("#footer_content").slideToggle("fast");
+    });
 });
 
-$$('#barra_inferior').swipeUp(function(){
-    alert('scroll para arriba')
-});
-
-
-function onDeviceReady() {
-    if (window.device.platform === 'iOS' && parseFloat(window.device.version) === 7.0)
-        StatusBar.overlaysWebView(false);
+function set_map_height(){
+    $('#map').css('height', $(document).height())
 }
-document.addEventListener('deviceready', onDeviceReady, false);
