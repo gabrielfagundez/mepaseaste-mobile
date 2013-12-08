@@ -8,5 +8,5 @@ $(document).ready(function() {
 });
 
 function set_map_height(){
-    $('#map').css('height', $(document).height())
+    $('#map').css('height', $(document).height() - 50)
 }

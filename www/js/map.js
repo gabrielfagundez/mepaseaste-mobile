@@ -1,6 +1,6 @@
 // Global variables
 var map;
-var zoom = 14;
+var zoom = 15;
 var markerId = 1;
 var taxis = new Array();
 
