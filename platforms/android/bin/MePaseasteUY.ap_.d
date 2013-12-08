@@ -40,8 +40,12 @@
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon/marker.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon/marker.white.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon/start_marker.png \
+/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/00000002 \
+/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/00000003 \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_action_expand.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_action_overflow.png \
+/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_action_play.fw.png \
+/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_action_play.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_action_refresh.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_action_rotate_right.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_drawer.png \
