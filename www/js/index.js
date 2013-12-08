@@ -3,7 +3,7 @@ $(document).ready(function() {
     set_map_height()
 
     $("#toggle").click(function(){
-        $("#panel").slideToggle("fast");
+        $("#footer_content").slideToggle("fast");
     });
 });
 

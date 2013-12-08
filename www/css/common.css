@@ -1,3 +1,10 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: #252525
+}
+
 .hide{
     display: none;
 }
