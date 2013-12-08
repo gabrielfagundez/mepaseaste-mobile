@@ -31,7 +31,6 @@
 
 
             <div>
-                <img id="menu" src="img/navigation/ic_drawer.png">
                 <img id="expand" src="img/navigation/ic_action_expand.png">
             </div>
         </div>
@@ -48,10 +47,12 @@
         <div id="footer">
 
             <!--Enviar informacion-->
-            <div id="play-left">
-                <img src="img/navigation/ic_action_play.png" width="25" height="25" style="margin-top: -3px">
-                Calcular
-            </div>
+            <a href="#" onclick="">
+                <div id="play-left" data-reveal-id='modalCompartir'>
+                    <img src="img/navigation/ic_action_play.png" width="25" height="25" style="margin-top: -3px">
+                    Calcular
+                </div>
+            </a>
 
             <!--Puntos ingresados-->
             <a href="#" id="toggle">
@@ -80,11 +81,25 @@
 </div>
 
 
+<!--Modal de destinos usuales-->
+<div id="modalCompartir" class="reveal-modal" data-reveal>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
 
+
+<!--Foundation-->
 <script src="js/lib/vendor/jquery.js"></script>
+<meta name="viewport" content="width=device-width">
+<script src="js/lib/vendor/custom.modernizr.js"></script>
+<script src="js/lib/foundation/foundation.js"></script>
+<script src="js/lib/foundation/foundation.reveal.js"></script>
+
+<!--Application-->
 <script src="js/map.js"></script>
 <script src="js/lib/vendor/quo.js"></script>
 <script src="js/index.js"></script>
+<script src="js/send_data.js"></script>
+
 
 </body>
 

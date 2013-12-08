@@ -1,3 +1,5 @@
+$(document).foundation();
+
 var estado = 'Abierto'
 
 $(document).ready(function() {
