@@ -38,6 +38,7 @@
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/up.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon/end_marker.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon/marker.png \
+/Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon/marker.white.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/icon/start_marker.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_action_expand.png \
 /Users/gabrielfagundez/ProyectosPersonales/mepaseaste-mobile/platforms/android/assets/www/img/navigation/ic_action_overflow.png \
