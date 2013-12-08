@@ -1,4 +1,5 @@
 #upper {
+    opacity: 0.9;
     width: 100%;
     position: absolute;
 }
@@ -10,17 +11,20 @@
 }
 
 #footer_content {
+    opacity: 0.9;
     display: none;
     background-color: #ffffff;
 }
 
 .marcador_blanco{
+    opacity: 0.9;
     width: 100%;
     height: 50px;
     position: relative;
     background-color: #ffffff;
 }
 .marcador_gris{
+    opacity: 0.9;
     width: 100%;
     height: 50px;
     position: relative;
@@ -81,7 +85,4 @@
     background-color: #45b39c;
     width: 4px;
     height: 100%;
-}
-#ver_puntos{
-    display: inline;
 }
